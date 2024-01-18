@@ -91,7 +91,7 @@ export default function AuthPage() {
           <Card className="max-w-md w-full  rounded-2xl">
             <CardHeader>
               <CardTitle>Register Form</CardTitle>
-              <CardDescription>Let's join with us</CardDescription>
+              <CardDescription>Let&apos;s join with us</CardDescription>
             </CardHeader>
             <CardContent>
               <Form {...form}>
@@ -215,7 +215,7 @@ export default function AuthPage() {
           <Card className="max-w-md w-full  rounded-2xl">
             <CardHeader>
               <CardTitle>Login Form</CardTitle>
-              <CardDescription>Let's join with us</CardDescription>
+              <CardDescription>Let&apos;s join with us</CardDescription>
             </CardHeader>
             <CardContent>
               <Form {...form}>
