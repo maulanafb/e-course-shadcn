@@ -34,9 +34,9 @@ const Navbar = () => {
 
       <div className="hidden  lg:flex space-x-6 items-center  text-sm">
         <SearchDialog />
-        <Link href="">Log in</Link>
+        <Link href="/auth">Log in</Link>
         <Link
-          href=""
+          href="/auth"
           className="px-4 py-1 bg-black rounded-md font-semibold text-white hover:bg-gray-800 transition-all duration-300"
         >
           Get Started Free <span className="font-bold text-[15px]">→</span>
