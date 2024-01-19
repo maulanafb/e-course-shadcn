@@ -90,7 +90,7 @@ export default function AuthPage() {
         <TabsContent value="signin">
           <Card className="max-w-md w-full  rounded-2xl">
             <CardHeader>
-              <CardTitle>Register Form</CardTitle>
+              <CardTitle>Login Form</CardTitle>
               <CardDescription>Let&apos;s join with us</CardDescription>
             </CardHeader>
             <CardContent>
@@ -214,7 +214,7 @@ export default function AuthPage() {
         <TabsContent value="signup">
           <Card className="max-w-md w-full  rounded-2xl">
             <CardHeader>
-              <CardTitle>Login Form</CardTitle>
+              <CardTitle>Register Form</CardTitle>
               <CardDescription>Let&apos;s join with us</CardDescription>
             </CardHeader>
             <CardContent>

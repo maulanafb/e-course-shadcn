@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { Input } from "../ui/input";
 import { SearchDialog } from "./SearchDialog";
 import { NavbarItem } from "./NavbarItem";
 
@@ -12,20 +11,29 @@ const Navbar = () => {
   return (
     <nav className="border-b container text-gray-800 bg-opacity-30 backdrop-blur-md sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-3 bg-white">
       <div className="flex space-x-6 justify-center items-center">
-        <Link href={"/"} className="font-semibold text-lg">
+        <Link
+          href={"/"}
+          className="font-semibold text-lg hover:text-[#71717a] transition-all duration-300"
+        >
           CodingCraft
         </Link>
         <div
-          className={`lg:flex items-center space-x-3 font-[500] tracking-tight text-[14px] ${
+          className={`lg:flex items-center  font-[500] tracking-tight text-[14px] ${
             isMenuOpen ? "flex" : "hidden"
           }`}
         >
           <NavbarItem />
-          <div className="flex space-x-6">
-            <a href="#" className="">
+          <div className="flex ">
+            <a
+              href="#"
+              className="hover:bg-[#e6e8eb80] px-4 py-2 rounded-md transition-all duration-300"
+            >
               Contact
             </a>
-            <a href="#" className="">
+            <a
+              href="#"
+              className="hover:bg-[#e6e8eb80] px-4 py-2 rounded-md transition-all duration-300"
+            >
               Support
             </a>
           </div>

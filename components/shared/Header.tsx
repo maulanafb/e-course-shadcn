@@ -14,21 +14,16 @@ const Header = () => {
           Today.
         </div>
         <div className="flex items-center space-x-4 py-4">
-          <div className="px-4 py-1 bg-[#050505] rounded-md text-white cursor-pointer hover:bg-gray-900">
+          <div className="px-4 py-1 bg-[#050505] rounded-md text-white cursor-pointer hover:bg-gray-900 transition-all duration-300">
             Unlock your skills →
           </div>
-          <div className="text-[#0a85d1] cursor-pointer hover:underline hover:text-[#0c3e5e]">
+          <div className="text-[#0a85d1] cursor-pointer hover:underline hover:text-[#0c3e5e] transition-all duration-300">
             <a href="https://roadmap.sh" target="_blank">
               Visit Roadmap →
             </a>
           </div>
         </div>
-        <Image
-          src={"/home-hero.webp"}
-          height={700}
-          width={1024}
-          alt="home-hero"
-        />
+        <Image src={"/g25.svg"} height={10} width={800} alt="home-hero" />
       </div>
     </section>
   );

@@ -10,14 +10,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-black ">
+    <footer className="border-t border-[#aeaeb1]  tracking-tighter">
       <div className="container flex flex-row mx-auto justify-between py-5 max-w-[1224px]">
-        <div className="font-semibold">
-          Build By{" "}
+        <div className="">
+          Build By
           <a
             href="https://www.maulanafb.my.id/"
             target="_blank"
-            className="hover:text-blue-500 transition-all duration-300"
+            className="hover:text-blue-500 transition-all duration-300 font-semibold"
           >
             @MaulanaFb
           </a>
