@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/shared/Navbar";
 import NextTopLoader from "nextjs-toploader";
+import Footer from "@/components/shared/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         <NextTopLoader />
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>

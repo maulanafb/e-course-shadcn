@@ -15,10 +15,12 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-4 py-4">
           <div className="px-4 py-1 bg-[#050505] rounded-md text-white cursor-pointer hover:bg-gray-900">
-            Get Started →
+            Unlock your skills →
           </div>
           <div className="text-[#0a85d1] cursor-pointer hover:underline hover:text-[#0c3e5e]">
-            Visit Roadmap →
+            <a href="https://roadmap.sh" target="_blank">
+              Visit Roadmap →
+            </a>
           </div>
         </div>
         <Image
