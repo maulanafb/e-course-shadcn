@@ -25,13 +25,13 @@ const Navbar = () => {
           <NavbarItem />
           <div className="flex ">
             <a
-              href="#"
+              href=""
               className="hover:bg-[#e6e8eb80] px-4 py-2 rounded-md transition-all duration-300"
             >
               Contact
             </a>
             <a
-              href="#"
+              href=""
               className="hover:bg-[#e6e8eb80] px-4 py-2 rounded-md transition-all duration-300"
             >
               Support

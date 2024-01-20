@@ -29,6 +29,7 @@ import {
 import { toast } from "sonner";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TabsContent } from "@radix-ui/react-tabs";
+import confetti from "canvas-confetti";
 
 const formSchema = z
   .object({
@@ -73,10 +74,38 @@ export default function AuthPage() {
 
   const accountType = form.watch("accountType");
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    // console.log({ values });
     toast("Event has been created.");
   };
+  const handleConvetti = () => {
+    var duration = 5 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
+    function randomInRange(min: any, max: any) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var interval: any = setInterval(function () {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+    }, 250);
+  };
   return (
     <main className="container flex min-h-screen flex-col items-center justify-between py-4">
       <Tabs
@@ -202,8 +231,13 @@ export default function AuthPage() {
 
                   <div className="flex gap-2 w-full">
                     <Button type="submit">Login</Button>
-                    <Button type="reset" variant="secondary">
-                      Reset
+                    <Button
+                      onClick={handleConvetti}
+                      type="reset"
+                      variant="secondary"
+                      className="hover:bg-[#d6d6d6]"
+                    >
+                      Try Convetti 🎉🎉🎉
                     </Button>
                   </div>
                 </form>
@@ -326,8 +360,13 @@ export default function AuthPage() {
 
                   <div className="flex gap-2 w-full">
                     <Button type="submit">Register</Button>
-                    <Button type="reset" variant="secondary">
-                      Reset
+                    <Button
+                      onClick={handleConvetti}
+                      type="reset"
+                      variant="secondary"
+                      className="hover:bg-[#d6d6d6]"
+                    >
+                      Try Convetti 🎉🎉🎉
                     </Button>
                   </div>
                 </form>
