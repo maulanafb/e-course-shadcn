@@ -2,14 +2,6 @@
 import React, { useEffect } from "react";
 // import "./svg.css";
 const HeroAnim = () => {
-  useEffect(() => {
-    const importStylesheet = async () => {
-      await import("./svg.css"); // Delays the import
-    };
-
-    // Delay the import by 2 seconds (adjust as needed)
-    setTimeout(importStylesheet, 800);
-  }, []);
   return (
     <div className="overflow-x-hidden ">
       <svg
