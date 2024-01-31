@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="flex space-x-6 justify-center items-center">
         <Link
           href={"/"}
-          className="font-semibold text-lg hover:text-[#71717a] transition-all duration-300"
+          className="font-bold text-lg hover:text-[#71717a] transition-all duration-300"
         >
           CodingCraft
         </Link>

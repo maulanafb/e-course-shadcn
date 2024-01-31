@@ -20,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ scrollBehavior: "smooth" }}>
+      <body
+        className={`${inter.className} bg-[#f8f8f8]`}
+        style={{ scrollBehavior: "smooth" }}
+      >
         <Navbar />
         <NextTopLoader />
         <Toaster position="top-center" />

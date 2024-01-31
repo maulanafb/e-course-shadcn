@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import HeroAnim from "./HeroAnim";
 
 const Header = () => {
   return (
@@ -23,7 +23,8 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <Image src={"/g25.svg"} height={10} width={800} alt="home-hero" />
+        {/* <Image src={"/g25.svg"} height={10} width={800} alt="home-hero" /> */}
+        <HeroAnim />
       </div>
     </section>
   );
