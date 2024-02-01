@@ -1,5 +1,4 @@
 import React from "react";
-import HeroAnim from "./HeroAnim";
 import Image from "next/image";
 
 const Header = () => {
