@@ -91,26 +91,31 @@ const Navbar = () => {
       </nav>
       <div className="relative">
         <div
-          className={`lg:hidden flex flex-col  py-3 px-2 ${
+          className={`lg:hidden flex flex-col  py-6 px-6 ${
             isMenuOpen ? "bg-[#e6e8eb] -bottom-0 shadow-lg" : "-bottom-full"
-          } duration-500 h-[85%] w-screen z-10 fixed rounded-t-[40px]`}
+          } duration-500 h-[85%] w-screen z-10 fixed rounded-t-[35px]`}
         >
-          <svg
-            className="w-6 h-6 justify-end"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="flex justify-end bg-[#e6e8eb80]"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </div>
           <span className="text-black text-2xl font-bold mb-4">
-            Navbar Menu Mobile
+            Navbar Menu Mobiles
           </span>
           {/* Place other menu items here */}
           <button

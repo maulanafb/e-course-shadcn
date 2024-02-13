@@ -11,7 +11,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="border-t border-[#aeaeb1]  tracking-tighter">
-      <div className="container flex flex-col items-center md:flex-row mx-auto justify-evenly py-5 max-w-[1224px]">
+      <div className="md:mx-auto flex flex-col items-center md:flex-row  justify-between py-5 md:max-w-[1224px]">
         <div className="">
           Build By
           <a

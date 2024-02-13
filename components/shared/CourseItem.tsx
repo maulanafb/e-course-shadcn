@@ -5,7 +5,10 @@ import React from "react";
 
 const CourseItem = () => {
   return (
-    <Link href={`/course-detail/1`}>
+    <Link
+      href={`/course-detail/1`}
+      className="flex justify-center items-center"
+    >
       <div className="flex flex-col  rounded-[20px] bg-[#fff] overflow-x-hidden w-[335px] shadow-sm">
         {/* image */}
         <Image
