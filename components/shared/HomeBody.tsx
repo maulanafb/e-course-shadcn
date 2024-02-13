@@ -9,28 +9,37 @@ import CourseItem from "./CourseItem";
 //   return res.json();
 // }
 
-const HomeBody = async () => {
+const HomeBody = () => {
   // const productData = await getProducts();
   // console.log(productData[2]);
   return (
     <div className="py-10">
       <div className="flex justify-between items-center">
-        <h1 className="text-[36px] font-semibold tracking-tighter text-start leading-[40px]">
-          Unlock your potential <br /> with high demand skills.
+        <h1 className="text-[36px] font-semibold tracking-tighter text-center md:text-start leading-[40px]">
+          Unlock your potential <br className="hidden md:block " /> with high
+          demand skills.
         </h1>
         <div>
           <Link
             href="/courses"
-            className="bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
+            className="hidden md:block  bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
           >
             All Courses →
           </Link>
         </div>
       </div>
-      <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[70px] justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[70px] justify-center">
         <CourseItem />
         <CourseItem />
         <CourseItem />
+      </div>
+      <div className="flex justify-center mt-5">
+        <Link
+          href="/courses"
+          className="text-center md:hidden w-full bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
+        >
+          Browse All Courses
+        </Link>
       </div>
     </div>
   );
