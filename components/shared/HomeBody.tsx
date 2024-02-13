@@ -1,16 +1,16 @@
+import FormatRupiah from "@/lib/formatter";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HomeBody = () => {
-  function formatRupiah(amount: number): string {
-    return amount.toLocaleString("id-ID", {
-      style: "currency",
-      currency: "IDR",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    });
-  }
+async function getProducts() {
+  const res = await fetch(`https://fakestoreapi.com/products`);
+  return res.json();
+}
+
+const HomeBody = async () => {
+  const productData = await getProducts();
+  console.log(productData[2]);
   return (
     <div className="py-10">
       <div className="flex justify-between items-center">
@@ -49,10 +49,10 @@ const HomeBody = () => {
             </h1>
             <div className="flex items-center gap-2">
               <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {formatRupiah(400000)}
+                {FormatRupiah(400000)}
               </span>
               <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {formatRupiah(200000)}
+                {FormatRupiah(200000)}
               </span>
             </div>
           </div>
@@ -82,10 +82,10 @@ const HomeBody = () => {
             </h1>
             <div className="flex items-center gap-2">
               <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {formatRupiah(400000)}
+                {FormatRupiah(400000)}
               </span>
               <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {formatRupiah(200000)}
+                {FormatRupiah(200000)}
               </span>
             </div>
           </div>
@@ -115,10 +115,10 @@ const HomeBody = () => {
             </h1>
             <div className="flex items-center gap-2">
               <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {formatRupiah(400000)}
+                {FormatRupiah(400000)}
               </span>
               <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {formatRupiah(200000)}
+                {FormatRupiah(200000)}
               </span>
             </div>
           </div>
