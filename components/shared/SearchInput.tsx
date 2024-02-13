@@ -7,7 +7,7 @@ export function SearchInput() {
     <div className="flex w-full max-w-sm items-center space-x-2">
       <Input type="email" placeholder="Search Courses..." />
       <Button type="submit">
-        <SearchIcon />
+        <SearchIcon className="w-full" />
       </Button>
     </div>
   );
