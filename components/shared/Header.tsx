@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -14,10 +15,13 @@ const Header = () => {
           Today.
         </div>
         <div className="flex flex-col justify-center md:flex-row items-center space-x-4 py-4">
-          <div className="px-4 py-1 bg-[#050505] rounded-md text-white cursor-pointer hover:bg-gray-900 transition-all duration-300">
+          <Link
+            href="/courses"
+            className="px-4 py-1 bg-primary rounded-md text-white cursor-pointer hover:bg-gray-900 transition-all duration-300"
+          >
             Unlock skills →
-          </div>
-          <div className="text-[#0a85d1] cursor-pointer hover:underline hover:text-[#0c3e5e] transition-all duration-300">
+          </Link>
+          <div className="text-primary cursor-pointer hover:underline hover:text-[#0c3e5e] transition-all duration-300">
             <a href="https://roadmap.sh" target="_blank">
               Visit Roadmap →
             </a>

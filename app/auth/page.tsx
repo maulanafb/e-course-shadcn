@@ -30,6 +30,7 @@ import { toast } from "sonner";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TabsContent } from "@radix-ui/react-tabs";
 import confetti from "canvas-confetti";
+import Navbar from "@/components/shared/Navbar";
 
 const formSchema = z
   .object({

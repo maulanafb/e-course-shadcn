@@ -25,7 +25,7 @@ export default function RootLayout({
         style={{ scrollBehavior: "smooth" }}
       >
         <Navbar />
-        <NextTopLoader />
+        <NextTopLoader color="#16a34a" />
         <Toaster position="top-center" />
         {children}
         <Footer />

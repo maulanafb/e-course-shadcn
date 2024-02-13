@@ -2,15 +2,16 @@ import FormatRupiah from "@/lib/formatter";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CourseItem from "./CourseItem";
 
-async function getProducts() {
-  const res = await fetch(`https://fakestoreapi.com/products`);
-  return res.json();
-}
+// async function getProducts() {
+//   const res = await fetch(`https://fakestoreapi.com/products`);
+//   return res.json();
+// }
 
 const HomeBody = async () => {
-  const productData = await getProducts();
-  console.log(productData[2]);
+  // const productData = await getProducts();
+  // console.log(productData[2]);
   return (
     <div className="py-10">
       <div className="flex justify-between items-center">
@@ -19,113 +20,17 @@ const HomeBody = async () => {
         </h1>
         <div>
           <Link
-            href=""
-            className="bg-white px-4 py-1 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
+            href="/courses"
+            className="bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
           >
             All Courses →
           </Link>
         </div>
       </div>
-      <div className="flex gap-4 mt-[70px] justify-center">
-        <div className="flex flex-col  rounded-[20px] bg-[#fff] overflow-x-hidden w-[335px] shadow-sm">
-          {/* image */}
-          <Image
-            src={"/course1.jpg"}
-            className="rounded-t-[20px]"
-            alt="course"
-            width={353}
-            height={255}
-          />
-          {/* description  */}
-          <div className="flex px-3 py-4 border-b">
-            <h1 className="text-[18px] font-semibold tracking-tighter ">
-              Design Systems for Website using Figma
-            </h1>
-          </div>
-
-          <div className="flex px-3 py-4 justify-between">
-            <h1 className="text-[16px] font-semibold tracking-tighter ">
-              <span className="font-medium">by</span> <span>Maulana Fb</span>
-            </h1>
-            <div className="flex items-center gap-2">
-              <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {FormatRupiah(400000)}
-              </span>
-              <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {FormatRupiah(200000)}
-              </span>
-            </div>
-          </div>
-
-          {/* price  */}
-          {/* enrol  */}
-        </div>
-        <div className="flex flex-col  rounded-[20px] bg-[#fff] overflow-x-hidden w-[335px] shadow-sm">
-          {/* image */}
-          <Image
-            src={"/course1.jpg"}
-            className="rounded-t-[20px]"
-            alt="course"
-            width={353}
-            height={255}
-          />
-          {/* description  */}
-          <div className="flex px-3 py-4 border-b">
-            <h1 className="text-[18px] font-semibold tracking-tighter ">
-              Design Systems for Websites using Figma
-            </h1>
-          </div>
-
-          <div className="flex px-3 py-4 justify-between">
-            <h1 className="text-[16px] font-semibold tracking-tighter ">
-              <span className="font-medium">by</span> <span>Maulana Fb</span>
-            </h1>
-            <div className="flex items-center gap-2">
-              <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {FormatRupiah(400000)}
-              </span>
-              <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {FormatRupiah(200000)}
-              </span>
-            </div>
-          </div>
-
-          {/* price  */}
-          {/* enrol  */}
-        </div>
-        <div className="flex flex-col  rounded-[20px] bg-[#fff] overflow-x-hidden w-[335px] shadow-sm">
-          {/* image */}
-          <Image
-            src={"/course1.jpg"}
-            className="rounded-t-[20px]"
-            alt="course"
-            width={353}
-            height={255}
-          />
-          {/* description  */}
-          <div className="flex px-3 py-4 border-b">
-            <h1 className="text-[18px] font-semibold tracking-tighter ">
-              Design Systems for Websites using Figma
-            </h1>
-          </div>
-
-          <div className="flex px-3 py-4 justify-between">
-            <h1 className="text-[16px] font-semibold tracking-tighter ">
-              <span className="font-medium">by</span> <span>Maulana Fb</span>
-            </h1>
-            <div className="flex items-center gap-2">
-              <span className="text-[#8d8c8c] text-[14px] font-bold tracking-tighter line-through animate-blink">
-                {FormatRupiah(400000)}
-              </span>
-              <span className="text-[#fa5d29] font-bold tracking-tighter">
-                {FormatRupiah(200000)}
-              </span>
-            </div>
-          </div>
-
-          {/* price  */}
-          {/* enrol  */}
-        </div>
+      <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[70px] justify-center">
+        <CourseItem />
+        <CourseItem />
+        <CourseItem />
       </div>
     </div>
   );

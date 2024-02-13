@@ -45,7 +45,7 @@ const Navbar = () => {
         <Link href="/auth">Log in</Link>
         <Link
           href="/auth"
-          className="px-4 py-1 bg-black rounded-md font-semibold text-white hover:bg-gray-800 transition-all duration-300"
+          className="px-4 py-1 bg-primary rounded-md font-semibold text-white hover:bg-gray-800 transition-all duration-300"
         >
           Get Started Free <span className="font-bold text-[15px]">→</span>
         </Link>
