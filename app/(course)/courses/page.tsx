@@ -1,4 +1,6 @@
 import CourseItem from "@/components/shared/CourseItem";
+import { SearchDialog } from "@/components/shared/SearchDialog";
+import { SearchInput } from "@/components/shared/SearchInput";
 import React from "react";
 
 const Courses = () => {
@@ -8,7 +10,10 @@ const Courses = () => {
         <div>
           <h1 className="text-title text-[100px]">Unlock Your Skill&rsquo;s</h1>
         </div>
-        <div className="flex py-10 max-w-[1240px]">All Courses</div>
+        <div className="flex py-5 max-w-[1240px]">All Courses</div>
+        <div className="flex justify-center w-[345px] md:w-[1000px] md:max-w-lg py-2">
+          <SearchInput />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 mt-[20px] justify-center">
           <CourseItem />
           <CourseItem />

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import CourseItem from "./CourseItem";
+import { Unlock } from "lucide-react";
 
 // async function getProducts() {
 //   const res = await fetch(`https://fakestoreapi.com/products`);
@@ -15,9 +16,10 @@ const HomeBody = () => {
   return (
     <div className="py-10">
       <div className="flex justify-between items-center">
-        <h1 className="text-[36px] font-semibold tracking-tighter text-center md:text-start leading-[40px]">
+        <h1 className="text-[36px] font-semibold tracking-tighter text-center md:text-start leading-[40px] relative">
           Unlock your potential <br className="hidden md:block " /> with high
-          demand skills.
+          demand
+          <span className="relative"> skills </span>
         </h1>
         <div>
           <Link
@@ -36,7 +38,7 @@ const HomeBody = () => {
       <div className="flex justify-center mt-5">
         <Link
           href="/courses"
-          className="text-center md:hidden w-full bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
+          className="text-center md:hidden w-full tracking-tighter bg-primary px-4 py-1 text-background rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
         >
           Browse All Courses
         </Link>
