@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden  lg:flex space-x-6 items-center  text-sm">
+        <div className="hidden  lg:flex space-x-6 items-center   text-sm">
           <SearchDialog />
           <Link href="/auth">Log in</Link>
           <Link
@@ -53,7 +53,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden flex justify-center items-center bg-[#e6e8eb80] p-2 rounded-lg">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className=" focus:outline-none"
@@ -95,12 +95,15 @@ const Navbar = () => {
           href={"/"}
           className="lg:hidden font-bold text-lg  px-2 py-1 rounded hover:bg-[#e6e8eb80] hover:text-[#5cc081] text-[#16a34a] transition-all duration-300"
         >
-          <Image src={"/logo-mobile.png"} width={30} height={30} alt="logo" />
+          <Image src={"/logo-mobile.png"} width={35} height={35} alt="logo" />
         </Link>
 
-        <div onClick={() => setIsMenuAccountOpen(!isMenuAccountOpen)}>
+        <div
+          onClick={() => setIsMenuAccountOpen(!isMenuAccountOpen)}
+          className="flex justify-center items-center bg-[#e6e8eb80] p-2 rounded-lg"
+        >
           <Image
-            src={"/user.png"}
+            src={"/account.svg"}
             width={30}
             height={30}
             alt="logo"
@@ -115,7 +118,7 @@ const Navbar = () => {
           } duration-500 h-[85%] w-screen z-10 fixed rounded-t-[35px]`}
         >
           <div
-            className="flex justify-end bg-[#e6e8eb80]"
+            className="flex justify-end "
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
