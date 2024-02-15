@@ -100,7 +100,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setIsMenuAccountOpen(!isMenuAccountOpen)}
-          className="flex justify-center items-center bg-[#e6e8eb80] p-2 rounded-lg"
+          className="flex justify-center items-center bg-[#e6e8eb80] p-2 lg:hidden rounded-lg"
         >
           <Image
             src={"/account.svg"}
