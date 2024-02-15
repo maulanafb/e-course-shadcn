@@ -47,6 +47,18 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* <div className="hidden  lg:flex space-x-6 items-center   text-sm tracking-tighter">
+          <SearchDialog />
+          <div>Halo, Username</div>
+
+          <Image
+            src={"/account.svg"}
+            width={35}
+            height={35}
+            alt="account icon"
+          />
+        </div>
+         */}
         <div className="hidden  lg:flex space-x-6 items-center   text-sm">
           <SearchDialog />
           <Link href="/auth">Log in</Link>
@@ -98,19 +110,19 @@ const Navbar = () => {
         </div>
         <Link
           href={"/"}
-          className="lg:hidden font-bold text-lg  px-2 py-1 rounded hover:bg-[#e6e8eb80] hover:text-[#5cc081] text-[#16a34a] transition-all duration-200"
+          className="lg:hidden font-bold text-lg   rounded hover:bg-[#e6e8eb80] hover:text-[#5cc081] text-[#16a34a] transition-all duration-200"
         >
-          <Image src={"/logo-mobile.png"} width={35} height={35} alt="logo" />
+          <Image src={"/logo-mobile.png"} width={40} height={40} alt="logo" />
         </Link>
 
         <div
           onClick={() => setIsMenuAccountOpen(!isMenuAccountOpen)}
-          className="flex justify-center items-center  p-2 lg:hidden rounded-lg"
+          className="flex justify-center items-center  lg:hidden rounded-lg"
         >
           <Image
             src={"/account.svg"}
-            width={30}
-            height={30}
+            width={35}
+            height={35}
             alt="logo"
             className="text-primary"
           />
