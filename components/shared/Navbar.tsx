@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { SearchDialog } from "./SearchDialog";
 import { NavbarItem } from "./NavbarItem";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +116,7 @@ const Navbar = () => {
           <Image src={"/logo-mobile.png"} width={40} height={40} alt="logo" />
         </Link>
 
-        <div
+        {/* <div
           onClick={() => setIsMenuAccountOpen(!isMenuAccountOpen)}
           className="flex justify-center items-center  lg:hidden rounded-lg"
         >
@@ -126,7 +127,13 @@ const Navbar = () => {
             alt="logo"
             className="text-primary"
           />
-        </div>
+        </div> */}
+        <Link
+          href={"/auth"}
+          className="lg:hidden px-2 py-1 tracking-tighter text-white font-semibold bg-primary rounded-lg text-sm"
+        >
+          Sign In
+        </Link>
       </nav>
       <div className="relative">
         <div
