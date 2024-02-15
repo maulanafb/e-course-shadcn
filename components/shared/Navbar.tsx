@@ -10,6 +10,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuAccountOpen, setIsMenuAccountOpen] = useState(false);
 
+  const closeMenus = () => {
+    setIsMenuOpen(false);
+    setIsMenuAccountOpen(false);
+  };
+
   return (
     <>
       <nav className=" container text-gray-800 bg-opacity-30 backdrop-blur-md sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-3 bg-white">
@@ -142,15 +147,27 @@ const Navbar = () => {
           <div className="flex flex-col tracking-tighter gap-4 ">
             <h1 className="font-semibold tracking-tighter">Development</h1>
             <div className="flex justify-between">
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4">
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Fullstack
-              </div>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white  border-[1px] rounded-xl p-4">
+              </Link>
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 FrontEnd
-              </div>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4">
+              </Link>
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 BackEnd
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -158,32 +175,53 @@ const Navbar = () => {
             <h1 className="font-semibold tracking-tighter">Courses</h1>
             <div className="flex justify-between">
               <Link
+                onClick={closeMenus}
                 href={"/courses"}
                 className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
               >
                 All Courses
               </Link>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4">
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Website
-              </div>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white  border-[1px] rounded-xl p-4">
+              </Link>
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Mobile
-              </div>
+              </Link>
             </div>
           </div>
 
           <div className="flex flex-col tracking-tighter gap-4">
             <h1 className="font-semibold tracking-tighter">Events</h1>
             <div className="flex justify-between">
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4">
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Online
-              </div>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white  border-[1px] rounded-xl p-4">
+              </Link>
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Offline
-              </div>
-              <div className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4">
+              </Link>
+              <Link
+                onClick={closeMenus}
+                href={"/courses"}
+                className="flex flex-col bg-[#e6e8eb80] hover:bg-white border-[1px] rounded-xl p-4"
+              >
                 Collaboration
-              </div>
+              </Link>
             </div>
           </div>
         </div>
